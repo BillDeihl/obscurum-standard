@@ -1,0 +1,39 @@
+name: Scope question
+description: Does something belong inside the standard's boundary?
+labels: ["scope", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        OBSCURUM covers **static, at-rest** analysis of shipping packages.
+        Runtime defenses are out of scope except as visible in the binary
+        at rest. Check Scope and Non-Goals before filing.
+
+  - type: textarea
+    id: subject
+    attributes:
+      label: What is in question
+    validations:
+      required: true
+
+  - type: dropdown
+    id: direction
+    attributes:
+      label: You are arguing that it
+      options:
+        - Should be in scope, and currently is not
+        - Should be out of scope, and currently is in
+        - Is genuinely unclear either way
+    validations:
+      required: true
+
+  - type: textarea
+    id: argument
+    attributes:
+      label: Argument
+      description: |
+        Address the static/at-rest boundary directly. "It is important"
+        is not a scope argument — plenty of important things are out of
+        scope on purpose.
+    validations:
+      required: true

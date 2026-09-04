@@ -1,0 +1,66 @@
+name: Scoring rule defect
+description: A rule scores something wrong, or can be gamed
+labels: ["defect", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this when a rule in the standard produces a score that
+        misrepresents real resistance.
+
+        **Do not** post teardowns, extracted keys, or recovered source of a
+        third-party app. Describe the *class* of build and the *class* of
+        analysis. See [SECURITY.md](https://github.com/BillDeihl/obscurum-standard/blob/main/SECURITY.md).
+
+  - type: input
+    id: section
+    attributes:
+      label: Section
+      description: Which part of the standard? Heading or anchor is fine.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of defect
+      options:
+        - Over-scores — rewards a build that offers little real resistance
+        - Under-scores — penalizes a build that is actually resistant
+        - Gameable — a cosmetic change moves the score without changing resistance
+        - Mapping error — misstates a MASVS/MASTG relationship
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: claim
+    attributes:
+      label: What the standard currently says
+      description: Quote or paraphrase the rule as written.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reasoning
+    attributes:
+      label: Why that is wrong
+      description: |
+        What build characteristic, and what class of static analysis,
+        produces the mismatch? Be specific about the analysis class
+        (string extraction, control-flow recovery, symbol recovery, …)
+        without supplying a working recipe.
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: OWASP MAS/MASTG references, papers, or standards text.
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Optional. Rough direction is fine.
