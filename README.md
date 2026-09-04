@@ -2,7 +2,7 @@
 
 **An open standard for scoring how well a released mobile app resists static reverse engineering.**
 
-OBSCURUM (Latin for *hidden*) is a vendor-neutral paper standard. It asks a different question than most checklists: not only “did you turn obfuscation on?” but “how well does the shipping binary hide what an attacker can recover at rest?”
+OBSCURUM (Latin for *hidden*) is a vendor-neutral paper standard. Most checklists ask whether obfuscation is on. This asks how well the shipping binary hides what an attacker can recover at rest.
 
 This repository is the **public paper**. It holds the standard text, contribution rules, and writing guidance. It does **not** hold scoring tools, research notebooks, or private R&D.
 
