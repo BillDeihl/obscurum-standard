@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private security disclosure
+    url: https://github.com/BillDeihl/obscurum-standard/security/advisories/new
+    about: For a defect that names a specific shipping product's weakness, or anything embargoed.
+  - name: A vulnerability in someone else's app
+    url: https://github.com/BillDeihl/obscurum-standard/blob/main/SECURITY.md
+    about: Report it to that application's vendor, not here. Read this first.
