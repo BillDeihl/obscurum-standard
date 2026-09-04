@@ -1,0 +1,32 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.vscode/
+.idea/
+
+# Secrets — never in a public repo
+.env
+.env.*
+!.env.example
+*secrets*
+*.pem
+*.key
+
+# Private R&D bleed-over (this repo is paper-only)
+/research/
+/fixtures/
+/samples/
+*.apk
+*.ipa
+*.aab
+*.dex
+*.ipynb
+
+# Build / preview output if a site generator lands later
+_site/
+.cache/
+node_modules/
+*.pdf
