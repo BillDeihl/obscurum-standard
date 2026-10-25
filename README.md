@@ -34,9 +34,9 @@ OBSCURUM fills that gap for **static, at-rest** analysis of shipping mobile pack
 
 ## Status
 
-**Public starter — draft not yet published here.**
+**v0.2 Working Draft published for review: [`standard/obscurum.md`](standard/obscurum.md).**
 
-The intended document outline (to be filled from curated R&D, not dumped wholesale):
+The document outline (full text in [`standard/obscurum.md`](standard/obscurum.md)):
 
 1. Mission and rationale  
 2. Scope and non-goals  
@@ -59,10 +59,10 @@ The contents of this repository are licensed under [Creative Commons Attribution
 
 ## Contributing
 
-Anyone may open an issue or a pull request on the **paper**. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) first. Prefer issues for scope and wording disputes before large PRs.
+Anyone may open an issue or a pull request on the **paper**. Read [`CONTRIBUTING.md`](CONTRIBUTING.md) first. Prefer issues for scope and wording disputes before large PRs. All participants follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 Writing conventions for this kind of standard live in [`docs/WRITING-GUIDANCE.md`](docs/WRITING-GUIDANCE.md).
 
 ## Maintainer
 
-Editor: Bill Deihl.
+Editor: Bill Deihl. See [`GOVERNANCE.md`](GOVERNANCE.md) for decision-making and versioning, and [`CHANGELOG.md`](CHANGELOG.md) for release history.

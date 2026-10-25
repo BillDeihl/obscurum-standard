@@ -2,13 +2,13 @@
 
 | Track | Location | Notes |
 |---|---|---|
-| Public paper | this repo (`BillDeihl/obscurum-standard`) | Starter layout. Full draft text not published yet. |
+| Public paper | this repo (`BillDeihl/obscurum-standard`) | v0.2 working draft in [`standard/obscurum.md`](standard/obscurum.md) (in review). |
 | Private R&D | `BillDeihl/obscurum` (private) | Working draft, research, editorial defaults, experimental tools |
 
 ## Public milestones (planned)
 
-1. **Starter (now)** — README, license, contributing, writing guidance, empty standard home  
-2. **v0.x public draft** — curated standard body (scope, pillars, method, MASVS relationship) without private process dumps  
+1. **Starter (done)** — README, license, contributing, writing guidance, empty standard home  
+2. **v0.x public draft** — curated standard body (scope, pillars, method, MASVS relationship) without private process dumps — **in review**: [`standard/obscurum.md`](standard/obscurum.md)  
 3. **Conformance narrative** — how independent implementations should agree (principles first; fixtures later)  
 4. **Community review** — issues/PRs; later, OWASP Mobile discussion when ready  
 
