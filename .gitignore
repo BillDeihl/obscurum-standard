@@ -30,3 +30,6 @@ _site/
 .cache/
 node_modules/
 *.pdf
+
+# Local working files (reading packets, mark-ups) — never submitted
+/working/
