@@ -16,7 +16,7 @@ This standard proposes a single, vendor-neutral, reproducible way to score the o
 
 The name is Latin for *hidden*. The standard measures how hidden — and therefore how protected — a mobile application's secrets are from reverse engineering and tampering.
 
-**v0.2 note.** This draft folds in research and the 2026-06-15 metric debate adjudication: concrete measurement methods for adopted pillars, a tolerance-based determinism model, scored-core vs advisory layers, and provisional treatment of pillars that are not yet deterministically scoreable. Normative detector tables (appendices) remain draft. **Editorial defaults** (denominator, §6.4 path, freeze order) are locked for this draft so work continues without blocking on open questions.
+**v0.2 note.** This draft folds in research: concrete measurement methods for adopted pillars, a tolerance-based determinism model, scored-core vs advisory layers, and provisional treatment of pillars that are not yet deterministically scoreable. Normative detector tables (appendices) remain draft.
 
 *Appendices P1-P9 are referenced throughout but are not yet published; they will be released once frozen.*
 
@@ -105,7 +105,7 @@ This pattern is not hypothetical. Multiple commercial mobile application protect
 
 The consequence: obfuscation at rest is not a separate concern from runtime protection. It is the precondition for runtime protection to function. A binary that scores well under OBSCURUM gives its runtime defenses a chance to do their job; a binary that scores poorly leaves those defenses exposed before they can act.
 
-This is why a static-only standard, properly applied, is meaningful even for applications with extensive runtime protection. The static score is a lower bound on runtime protection effectiveness — runtime defenses cannot be more effective than the at-rest obfuscation that conceals them.
+This is why a static-only standard, properly applied, is meaningful even for applications with extensive runtime protection. A static score measures what is present in the shipped application; it does not measure how well that application is protected at runtime.
 
 ---
 
@@ -457,6 +457,8 @@ Composite = (Σ_{p in scoreable} pillar_sub_score(p) × tier_weight(p))
 
 When a provisional pillar's appendix freezes, add its weight to the denominator in the same minor/major version that marks it Scoreable. Do not silently drop missing pillars without documenting the active denominator set in the report (`score.denominator_pillars`).
 
+Until the referenced appendices are published and frozen, no composite score is computed or published under this draft; sub-scores are reported individually as provisional.
+
 ### 6.3 Letter grades
 
 The composite score maps to a letter grade:
@@ -728,7 +730,7 @@ This standard does not establish a paid certification program. Conformance is a 
 ## 13. Changelog (v0.1 → v0.2)
 
 - Added per-pillar **scoreable / provisional / advisory** status table (§5.0).
-- Merged measurement methods from 2026-06 research and proposed edits, **as revised by** the 2026-06-15 metric debate adjudication.
+- Merged measurement methods from 2026-06 research and proposed edits.
 - **P1, P2, P4, P5, P7:** concrete scored-core formulas; syntactic opacity; entropy/decode pairing rules.
 - **P3, P9:** concept adopted; composite blocked pending Appendix P3/P9.
 - **P6, P8:** removed from composite denominator; advisory-only pending redesign.
@@ -736,7 +738,7 @@ This standard does not establish a paid certification program. Conformance is a 
 - **§6.4:** replaced absolute cross-tool byte-for-byte claim with intra-impl determinism + conformance-suite cross-impl agreement + scored-core/advisory split.
 - **§7:** report schema gains `status`, `provisional`, `denominator_pillars`, `appendix_versions`.
 - **§9:** citation-class hygiene (controls vs tests vs weaknesses vs Top 10 context).
-- Editorial: scope separated from related internal work; this document remains the standard only.
+- Editorial: this document remains the standard only.
 
 Open work toward v0.3 / v1.0 readiness:
 
