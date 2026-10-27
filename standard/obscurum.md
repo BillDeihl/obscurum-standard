@@ -3,7 +3,7 @@
 ## An Open Standard for Measuring Mobile Application Obfuscation Quality
 
 **Version 0.2 — Working Draft**  
-**Aligned with OWASP MASVS-RESILIENCE**  
+**Maps to OWASP MASVS-RESILIENCE (independent; not affiliated with or endorsed by OWASP)**  
 **Supersedes:** v0.1 for active editorial work (v0.1 retained as historical baseline)
 
 ---
@@ -100,8 +100,6 @@ OBSCURUM is a static analysis standard. It scores what an attacker can observe a
 Dynamic protections — anti-debugging, anti-tampering, root and jailbreak detection, runtime application self-protection (RASP) — are themselves code that lives inside the binary. Their effectiveness depends entirely on an attacker being unable to locate, understand, and disable them before they execute.
 
 A common failure pattern in mobile security illustrates this dependency: applications shipping with substantial runtime protection libraries that are nevertheless bypassed because the binary's at-rest obfuscation is weak. An attacker who can read the binary clearly can statically locate runtime defense routines, identify initialization paths, and patch or short-circuit them before they activate. The dynamic defense, however sophisticated in design, is rendered inert by the static accessibility of its own implementation.
-
-This pattern is not hypothetical. Multiple commercial mobile application protection products have been documented as effectively disabled by attackers who first analyzed weakly protected host binaries to locate and neutralize the protection layer. The runtime protection was present but unprotected at rest.
 
 The consequence: obfuscation at rest is not a separate concern from runtime protection. It is the precondition for runtime protection to function. A binary that scores well under OBSCURUM gives its runtime defenses a chance to do their job; a binary that scores poorly leaves those defenses exposed before they can act.
 
@@ -471,7 +469,7 @@ The composite score maps to a letter grade:
 | 60–69 | D | Weak protection; critical gaps |
 | 0–59 | F | Critical failure; insufficient protection |
 
-Grade boundaries are calibrated against the threat model in Section 4 and may be adjusted in subsequent versions based on industry data and the conformance corpus.
+Grade boundaries will be calibrated against the threat model in Section 4 and may be adjusted in subsequent versions based on industry data and the conformance corpus.
 
 Verbal band labels under individual pillars (e.g. “weak / moderate / strong”) are **non-normative** aids; the numeric sub-score is authoritative.
 
@@ -610,7 +608,7 @@ OBSCURUM expects multiple conforming implementations to exist — open source, c
 
 ## 9. Relationship to OWASP MASVS-RESILIENCE
 
-OBSCURUM is designed as a measurement implementation of the obfuscation requirements expressed in the OWASP Mobile Application Security Verification Standard, MASVS-RESILIENCE category.
+OBSCURUM is designed to map to the obfuscation requirements expressed in the OWASP Mobile Application Security Verification Standard, MASVS-RESILIENCE category. OBSCURUM is an independent project and is not affiliated with or endorsed by OWASP.
 
 ### 9.1 Citation classes (do not mix in conformance claims)
 
