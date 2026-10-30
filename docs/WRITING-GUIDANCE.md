@@ -31,7 +31,26 @@ Keep the **standard body tight**. Long evidence trails, debate notes, and experi
 
 ## Normative language
 
-When the draft is mature enough, mark requirements clearly (for example RFC 2119-style MUST / SHOULD / MAY, or an equivalent table). Until then, label the whole document **Working Draft** and avoid sounding final.
+Use RFC 2119 keywords from the start: **MUST**, **MUST NOT**, **REQUIRED**, **SHALL**, **SHALL NOT**, **SHOULD**, **SHOULD NOT**, **RECOMMENDED**, **MAY**, **OPTIONAL**. Capitalize them when they carry that meaning and use ordinary words otherwise.
+
+Include the standard interpretation paragraph once, near the top of the draft:
+
+> The key words MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, and OPTIONAL in this document are to be interpreted as described in RFC 2119.
+
+Adopt this now rather than "when the draft is mature." Retrofitting it means re-reading every sentence to decide what it was supposed to mean; without it, readers argue about whether a given line is a requirement or advice. Costs one paragraph today.
+
+Continue to label the document **Working Draft** and avoid sounding final. Keyword discipline and draft status are separate things—a draft can be precise about which of its statements are requirements.
+
+## Section identity and numbering
+
+Once a section is cited in a contract, an assessment, or a procurement requirement, its number has to keep meaning what it meant.
+
+- Number sections explicitly. Do not rely on rendered position.
+- **Never renumber to close a gap.** A retired section stays retired, marked as such, rather than having its number reused.
+- Add new material at the end of its parent, or as a sub-level (4.2.1), rather than by shifting the sections after it.
+- Anchors follow the same rule. A heading may be reworded; its anchor should not change once published.
+
+Cheap to observe from the first draft, painful to impose after anyone has cited the document. See [PUBLISHING.md](PUBLISHING.md) for how versions are released and cited.
 
 ## What not to paste into public markdown
 
