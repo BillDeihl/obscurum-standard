@@ -6,6 +6,8 @@
 **Maps to OWASP MASVS-RESILIENCE (independent; not affiliated with or endorsed by OWASP)**  
 **Supersedes:** v0.1 for active editorial work (v0.1 retained as historical baseline)
 
+*The views expressed are my own and do not necessarily reflect the views of my employer or its affiliates. This document is for informational purposes only.*
+
 ---
 
 ## Preamble
