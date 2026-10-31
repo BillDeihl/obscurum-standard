@@ -2,6 +2,8 @@
 
 **An open standard for scoring how well a released mobile app resists static reverse engineering.**
 
+> *The views expressed are my own and do not necessarily reflect the views of my employer or its affiliates. This document is for informational purposes only.*
+
 OBSCURUM (from Latin *obscūrum*: dark, obscure, hidden) is a vendor-neutral paper standard. Most checklists ask whether obfuscation is on. This asks how well the shipping binary hides what an attacker can recover at rest.
 
 This repository is the **public paper**. It holds the standard text, contribution rules, and writing guidance. It does **not** hold scoring tools, research notebooks, or private R&D.
